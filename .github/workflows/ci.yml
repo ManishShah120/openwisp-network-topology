@@ -52,7 +52,7 @@ jobs:
       - name: Tests
         run: |
           coverage run --source=openwisp_network_topology runtests.py
-          SAMPLE_APP=1 ./runtests.py --parallel --keepdb
+          SAMPLE_APP=1 ./runtests.py --parallel=1 --keepdb
 
       - name: Upload Coverage
         run: coveralls --service=github
