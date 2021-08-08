@@ -45,6 +45,7 @@ jobs:
         run: |
           pip install -U -r requirements-test.txt
           pip install ${{ matrix.django-version }}
+          pip install tblib
 
       - name: QA checks
         run: ./run-qa-checks
